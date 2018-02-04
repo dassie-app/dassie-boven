@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <span>{{route?.name}}</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button small color="secondary" clear (click)="goToCrag(crag.id)">
+    <ion-icon name="arrow-back" padding-right></ion-icon>{{ crag?.name }}
+  </button>
+  <h1>{{ route?.name }}</h1>
+  <ion-card>
+    <ion-card-header text-right>
+        <ion-icon *ngFor="let star of starArray" name="star"></ion-icon>
+        {{route?.grade}}
+    </ion-card-header>
+    <ion-card-content>
+
+      {{ route?.description }}
+
+      <ion-row padding-top>
+        <ion-col>
+          <b>{{ route?.fa_date }} - {{ route?.fa_text}}</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          {{ route?.notes }}
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

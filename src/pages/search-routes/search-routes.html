@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-row justify-content-between>
+      <ion-title>
+        Search Routes
+      </ion-title>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Route Name</ion-label>
+      <ion-input type="text" [(ngModel)] = "searchTerm"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Grade</ion-label>
+      <ion-select [(ngModel)]="selectedGrade">
+        <ion-option value="any">Any</ion-option>
+        <ion-option *ngFor = "let grade of grades" [value]="grade">{{ grade }}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Stars</ion-label>
+      <ion-select [(ngModel)]="selectedStars">
+        <ion-option value="any">Any</ion-option>
+        <ion-option *ngFor = "let star of stars" [value]="star">{{star}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <route-card *ngFor="let route of routes | filterRoutes: selectedGrade : searchTerm : selectedStars | sortRoutes : sortProperty : sortAscending" (click)="goToRoute(route.id)"  [route]="route">
+  </route-card>
+</ion-content>
+
+<ion-fab bottom left>
+  <button ion-fab color="light" (click)="openOrderActionSheet()"><ion-icon name="settings"></ion-icon></button>
+</ion-fab>
