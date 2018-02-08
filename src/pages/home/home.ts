@@ -15,8 +15,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, private apiService: ApiService) {
     this.crags = this.apiService.getAllCrags().sort((a,b) => {
-      let A = a.name.replace('The', '');
-      let B = b.name.replace('The', '');
+      let A = a.name.replace('The ', '');
+      let B = b.name.replace('The ', '');
       if (A > B) {
         return 1;
       } else if (A < B){
