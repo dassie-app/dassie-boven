@@ -84,7 +84,7 @@ export const allCrags = [
    "id": 9,
    "area": 1,
    "name": "Wildfire",
-   "description": "These slabs are located on the lower tier down left/east from the Als Bells Area. The forest edge at the base had been burnt recently when the routes were opened. The east slab is actually fairly steep to start, and faces W of north. About 25m E past the west slab",
+   "description": "These slabs are located on the lower tier down left/east from the Als Bells Area. The forest edge at the base had been burnt recently when the routes were opened. The east slab is actually fairly steep to start, and faces W of north. About 25m E past the west slab. Can also be accessed by walking past the fence after the creche. There are knotted ropes to use for climbing down.",
    "aspect": "North",
    "approach": "The Leftmost crag on the Tranquilitas wall",
    "height": "25m"
