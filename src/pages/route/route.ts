@@ -22,7 +22,7 @@ export class RoutePage {
 
     this.route = this.apiService.getRouteById(this.routeId);
     this.starArray = [];
-    for (let i = 0; i > this.route.starts; i++) {
+    for (let i = 0; i < this.route.stars; i++) {
       this.starArray.push(0);
     }
 

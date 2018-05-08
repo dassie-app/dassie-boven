@@ -1,6 +1,7 @@
 <ion-card>
   <ion-card-header>
     {{ route.name }}
+    <b *ngIf="route?.number_draws > 0" float-right>[{{route?.number_draws}}D]</b>
   </ion-card-header>
   <ion-card-content>
     <ion-row>

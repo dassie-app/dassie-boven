@@ -15,6 +15,7 @@
     <ion-card-header text-right>
         <ion-icon *ngFor="let star of starArray" name="star"></ion-icon>
         {{route?.grade}}
+        <b *ngIf="route?.number_draws > 0">[{{route?.number_draws}}D]</b> <!-- TODO: Style this element -->
     </ion-card-header>
     <ion-card-content>
 
