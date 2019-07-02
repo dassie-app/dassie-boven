@@ -1,14 +1,19 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Waterval Boven
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  
+  <h3>Crags</h3>
+  <h4 *ngIf="!crags">Loading...</h4>
+  <ion-card *ngFor="let crag of crags" (click)="goToCrag(crag.id)">
+    <ion-card-header>
+      {{ crag.name }}
+    </ion-card-header>
+  </ion-card>
+
 </ion-content>
